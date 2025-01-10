@@ -1,0 +1,290 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.3 (22/9/2018)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% v1.3 author:
+% Zachary Taylor
+%
+% v1.3 repository:
+% https://github.com/ZDTaylor/Deedy-Resume-Reversed
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% TODO:
+% 1. Add various styling and section options and allow for multiple pages smoothly.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.3:
+% 1. Removed MacFonts version as I have no desire to maintain it nor access to macOS
+% 2. Switched column ordering
+% 3. Changed font styles/colors for easier human readability
+% 4. Added, removed, and rearranged sections to reflect my own experience
+% 5. Hid last updated
+%
+% v1.2:
+% 1. Added publications in place of societies.
+% 2. Collapsed a portion of education.
+% 3. Fixed a bug with alignment of overflowing long last updated dates on the top right.
+%
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[]{deedy-resume-reversed}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{Ian Pratt}{ %\urlstyle{same}\href{http://example.com}{example.com}| \href{http://example2.co}{example2.co}\\
+	\href{mailto:ianjdpratt@gmail.com}{ianjdpratt@gmail.com} | \href{tel:+447584139828}{+44 7584 139828}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.60\textwidth}
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%     EXPERIENCE
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\section{Experience}
+	\runsubsection{Windy City Lab}
+	\descript{| Software/Hardware Intern }
+	\location{June 2022 – August 2024 | Chicago, IL, USA}
+	\vspace{\topsep} % Hacky fix for awkward extra vertical space
+
+	The Windy City Labs is a company focused on consulting and educating for companies and schools interested in IoT and embedded technologies. This internship took the course of 3 summers, where, working both alone and with a team, I helped to:
+
+	\vspace{\topsep} % Hacky fix for awkward extra vertical space
+
+	\begin{tightemize}
+		\item Teach kids aged 14-18 the basics of CPU architecture, computer design, IoT and engineering.
+		\item Design and develop hardware and software for use in teaching the above, including a customizeable
+		assembler for a custom CPU architecture.
+		\item Create mocking applications and supporting libraries for testing hardware devices, used in conjunction with projects at the Mayo Clinic.
+	\end{tightemize}
+	\sectionsep
+
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%     PROJECTS
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\runsubsection{NAND7400}
+	\descript{| Solo Developer - Assembler}
+	\location{June 2023 – August 2023 | Chicago, IL, USA}
+	\begin{tightemize}
+		\item Solo developer for the NAND7400 Rust library, used in conjunction with the custom CPU architecture used in
+		the Windy City Lab internship.
+		\item NAND7400 parses, assembles, and formats the assembly code for the CPU, and binds into Swift as well, as it
+		was used in a SwiftUI-based application.
+	\end{tightemize}
+	\sectionsep
+
+	\runsubsection{Dotbak}
+	\descript{| Solo Developer - File Sync Utility}
+	\location{Feb 2023 – July 2023 | Chicago, IL, USA}
+	\begin{tightemize}
+		\item Solo develoepr of the Dotbak utility, made on my own off-time.
+		\item Dotbak synchronizes dotfiles (as well as any other files in a user's home directory) and backs them up to
+		a git repository.
+		\item Written in Rust, distributed as a singular binary for deployment on any user's machine.
+	\end{tightemize}
+	\sectionsep
+
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%     RESEARCH
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	% \section{Research}
+	% \runsubsection{Cornell Robot Learning Lab}
+	% \descript{| Researcher}
+	% \location{Jan 2014 – Jan 2015 | Ithaca, NY}
+	% Worked with \textbf{\href{http://www.cs.cornell.edu/~ashesh/}{Ashesh Jain}} and \textbf{\href{http://www.cs.cornell.edu/~asaxena/}{Prof Ashutosh Saxena}} to create \textbf{PlanIt}, a tool which  learns from large scale user preference feedback to plan robot trajectories in human environments.
+	% \sectionsep
+
+	% \runsubsection{Cornell Phonetics Lab}
+	% \descript{| Head Undergraduate Researcher}
+	% \location{Mar 2012 – May 2013 | Ithaca, NY}
+	% Led the development of \textbf{QuickTongue}, the first ever breakthrough tongue-controlled game with \textbf{\href{http://conf.ling.cornell.edu/~tilsen/}{Prof Sam Tilsen}} to aid in Linguistics research.
+	% \sectionsep
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%     COMMUNITY SERVICE
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	% \section{Community Service}
+
+	% \begin{tabular}{rll}
+	% 2013 -- 2018    & Tennessee     & St. Baldrick's Foundation\\
+	% 2014 -- 2017	& Tennessee     & American Cancer Society's Hope Lodge\\
+	% 2013 -- 2015    & Tennessee     & Habitat for Humanity\\
+	% 2011 -- 2015    & Tennessee     & Special Olympics\\
+	% \end{tabular}
+	% \sectionsep
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%     SOCIETIES
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	% \section{Societies}
+
+	% \begin{tabular}{rll}
+	% 2018 -- 2018    & National      & Association of Computing Machinery (ACM)\\
+	% 2017 -- 2019	& National      & Scrum Alliance Certified ScrumMaster\\
+	% 2015 -- 2019    & University    & Shackouls Honors College\\
+	% \end{tabular}
+	% \sectionsep
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%     AWARDS
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\section{Awards and Certifications}
+	\begin{tabular}{rll}
+		2024 & Illinois State Scholar                          \\
+		2024 & National Merit Scholarship Finalist and Awardee \\
+		2024 & National Cyber Scholarship Awardee              \\
+		2024 & GIAC GFACT Cybersecurity Certification          \\
+	\end{tabular}
+	\sectionsep
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%     PUBLICATIONS
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	% \section{Publications}
+	% \renewcommand\refname{\vskip -1.5cm} % Couldn't get this working from the .cls file
+	% \bibliographystyle{abbrv}
+	% \bibliography{publications}
+	% \nocite{*}
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%
+	%     COLUMN TWO
+	%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.33\textwidth}
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%     EDUCATION
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\section{Education}
+
+	\subsection{Imperial College London}
+	\descript{BEng in Computing}
+	\location{Expected June 2027 | London, UK}
+	% College of Engineering \\
+	% Dean's List (All Semesters) \\
+	% \location{ Cum. GPA: 4.0 / 4.0}
+	\sectionsep
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%     SKILLS
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\section{Skills}
+	\subsection{Programming}
+	\location{3+ years:}
+	Python \textbullet{} JavaScript \textbullet{} C/C++ \\
+	\location{1+ years:}
+	Rust \\
+	\location{0+ years:}
+	Swift \textbullet{} Haskell \textbullet{} Kotlin \\
+	\sectionsep
+
+	\subsection{Technology}
+	Git/Github \textbullet{} KiCad \textbullet{} Linux \\
+	CLI Apps \textbullet{} Embedded software \\
+	UNIX \textbullet{} Server-Side \\
+	\sectionsep
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%     COURSEWORK
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\section{Coursework}
+	%\subsection{Graduate}
+	%Analysis of Algorithms
+	%\sectionsep
+
+	\subsection{Undergraduate}
+	Computing Practicals \\
+	{\footnotesize \textit{\textbf{(Multiple programming languages) }}} \\
+	Calculus and Linear Algebra \\
+	Graphs and Algorithms \\
+	Computer Systems \& Architecture
+	\sectionsep
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%     Societies
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	% \section{Societies}
+	% National Merit Scholarship Finalist \\
+	% \sectionsep
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%     LINKS
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\section{Links}
+	Github: \href{https://github.com/cogsandsquigs}{\bf cogsandsquigs} \\
+	Website: \href{https://cogsandsquigs.dev}{\bf cogsandsquigs.dev}
+	% LinkedIn://  \href{https://www.linkedin.com/}{\bf cogsandsquigs}
+	\sectionsep
+
+\end{minipage}
+\end{document}  \documentclass[]{article}

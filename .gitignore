@@ -1,0 +1,9 @@
+# no compiled pdfs!
+*.pdf
+*.blg
+*.log
+*.gz
+*.aux
+*.out
+*.fdb_latexmk
+*.fls
