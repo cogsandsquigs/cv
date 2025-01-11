@@ -17,11 +17,11 @@
 \renewcommand\refname{\vskip -1.5cm}
 
 % Color definitions
-\usepackage[usenames,dvipsnames]{xcolor}
-\definecolor{date}{HTML}{666666}
-\definecolor{primary}{HTML}{2b2b2b}
-\definecolor{headings}{HTML}{6A6A6A}
-\definecolor{subheadings}{HTML}{333333}
+\usepackage[dvipsnames]{xcolor} % Changed from original, `usernames` is ignored and so is removed
+\definecolor{date}{HTML}{002080} % original {666666}
+\definecolor{primary}{HTML}{0b1b4b} % original: {2b2b2b}
+\definecolor{headings}{HTML}{1A2A66} % original: {6A6A6A}
+\definecolor{subheadings}{HTML}{1A3A9A} % original: {333333}
 
 % Set main fonts
 \usepackage{fontspec}
@@ -41,13 +41,15 @@
 % Name command
 \newcommand{\namesection}[2]{
 	\centering{
+		\color{headings}
 		\fontsize{40pt}{60pt}
 		\fontspec[Path = fonts/lato/]{Lato-Lig}\selectfont #1
 	} \\[5pt]
 	\centering{
-		\color{headings}
+		\color{subheadings}
 		\fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{11pt}{14pt}\selectfont #2}
-	\noindent\makebox[\linewidth]{\color{headings}\rule{\paperwidth}{0.4pt}}
+	\noindent\makebox[\linewidth]{\color{headings}\rule{\paperwidth}{0.4pt}
+	}
 	\vspace{-15pt}
 }
 
